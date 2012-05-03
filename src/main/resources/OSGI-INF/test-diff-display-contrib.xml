@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<component name="org.nuxeo.ecm.diff.service.DiffDisplayService.contrib.test">
+
+  <require>
+    org.nuxeo.ecm.diff.service.DiffDisplayService.contrib
+  </require>
+
+  <extension target="org.nuxeo.ecm.diff.service.DiffDisplayService"
+    point="diffDisplay">
+
+    <!-- Override Document diffDisplay -->
+    <diffDisplay type="Document">
+      <diffBlocks>
+        <diffBlock name="heading" />
+        <diffBlock name="file" />
+        <diffBlock name="testNoFields" />
+      </diffBlocks>
+    </diffDisplay>
+
+    <!-- SampleType diffDisplay -->
+    <diffDisplay type="SampleType">
+      <diffBlocks>
+        <diffBlock name="heading" />
+        <diffBlock name="dublincore" />
+        <diffBlock name="files" />
+        <diffBlock name="simpleTypes" />
+        <diffBlock name="complexTypesAndListOfLists" />
+      </diffBlocks>
+    </diffDisplay>
+
+    <!-- Headphone diffDisplay -->
+    <diffDisplay type="Headphone">
+      <diffBlocks>
+        <diffBlock name="heading" />
+        <diffBlock name="generalInfo" />
+        <diffBlock name="techData" />
+        <diffBlock name="distribution" />
+      </diffBlocks>
+    </diffDisplay>
+
+  </extension>
+
+  <extension target="org.nuxeo.ecm.diff.service.DiffDisplayService"
+    point="diffBlock">
+
+    <!-- No fields diffBlock -->
+    <diffBlock name="testNoFields" />
+
+    <!-- Override dublincore diffBlock -->
+    <!-- <diffBlock name="dublincore" label="label.diffBlock.dublincore"> 
+      <fields> <field schema="dublincore" name="created" /> <field schema="dublincore" 
+      name="creator" /> <field schema="dublincore" name="modified" /> <field schema="dublincore" 
+      name="lastContributor" /> <field schema="dublincore" name="contributors" 
+      /> <field schema="dublincore" name="subjects" /> </fields> </diffBlock> -->
+
+    <!-- simpleTypes diffBlock -->
+    <diffBlock name="simpleTypes" label="label.diffBlock.simpleTypes">
+      <fields>
+        <field schema="simpletypes" name="string" />
+        <field schema="simpletypes" name="textarea" />
+        <field schema="simpletypes" name="boolean" />
+        <field schema="simpletypes" name="integer" />
+        <field schema="simpletypes" name="date" />
+        <field schema="simpletypes" name="htmlText" />
+        <field schema="simpletypes" name="multivalued" />
+      </fields>
+    </diffBlock>
+
+    <!-- complexTypesAndListOfLists diffBlock -->
+    <diffBlock name="complexTypesAndListOfLists"
+      label="label.diffBlock.complexTypesAndListOfLists">
+      <fields>
+        <field schema="complextypes" name="complex">
+          <items>
+            <item>stringItem</item>
+            <item>integerItem</item>
+            <item>dateItem</item>
+            <item>booleanItem</item>
+          </items>
+        </field>
+        <field schema="complextypes" name="complexList">
+          <items>
+            <item>stringItem</item>
+            <item>dateItem</item>
+            <item>integerItem</item>
+          </items>
+        </field>
+        <field schema="listoflists" name="listOfLists" />
+      </fields>
+    </diffBlock>
+
+    <!-- generalInfo diffBlock (Headphone) -->
+    <diffBlock name="generalInfo" label="label.diffBlock.generalInfo">
+      <fields>
+        <field schema="headphone" name="product_code" />
+        <field schema="headphone" name="type" />
+      </fields>
+    </diffBlock>
+
+    <!-- techData diffBlock (Headphone) -->
+    <diffBlock name="techData" label="label.diffBlock.techData">
+      <fields>
+        <field schema="headphone" name="frequency_response">
+          <items>
+            <item>range</item>
+            <item>unit</item>
+          </items>
+        </field>
+        <field schema="headphone" name="impedance">
+          <items>
+            <item>value</item>
+            <item>unit</item>
+          </items>
+        </field>
+      </fields>
+    </diffBlock>
+
+    <!-- distribution diffBlock (Headphone) -->
+    <diffBlock name="distribution" label="label.diffBlock.distribution">
+      <fields>
+        <field schema="headphone" name="retailers">
+          <items>
+            <item>name</item>
+            <item>quantity</item>
+            <item>price</item>
+          </items>
+        </field>
+      </fields>
+    </diffBlock>
+
+  </extension>
+
+</component>
