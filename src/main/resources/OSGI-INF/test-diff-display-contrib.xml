@@ -46,22 +46,17 @@
     <!-- No fields diffBlock -->
     <diffBlock name="testNoFields" />
 
-    <!-- Override dublincore diffBlock -->
-    <!-- <diffBlock name="dublincore" label="label.diffBlock.dublincore"> 
-      <fields> <field schema="dublincore" name="created" /> <field schema="dublincore" 
-      name="creator" /> <field schema="dublincore" name="modified" /> <field schema="dublincore" 
-      name="lastContributor" /> <field schema="dublincore" name="contributors" 
-      /> <field schema="dublincore" name="subjects" /> </fields> </diffBlock> -->
-
     <!-- simpleTypes diffBlock -->
     <diffBlock name="simpleTypes" label="label.diffBlock.simpleTypes">
       <fields>
         <field schema="simpletypes" name="string" />
-        <field schema="simpletypes" name="textarea" />
+        <field schema="simpletypes" name="textarea"
+          displayContentDiffLinks="true" />
         <field schema="simpletypes" name="boolean" />
         <field schema="simpletypes" name="integer" />
         <field schema="simpletypes" name="date" />
-        <field schema="simpletypes" name="htmlText" />
+        <field schema="simpletypes" name="htmlText"
+          displayContentDiffLinks="true" />
         <field schema="simpletypes" name="multivalued" />
       </fields>
     </diffBlock>
@@ -72,17 +67,17 @@
       <fields>
         <field schema="complextypes" name="complex">
           <items>
-            <item>stringItem</item>
-            <item>integerItem</item>
-            <item>dateItem</item>
-            <item>booleanItem</item>
+            <item name="stringItem" displayContentDiffLinks="true" />
+            <item name="integerItem" />
+            <item name="dateItem" />
+            <item name="booleanItem" />
           </items>
         </field>
         <field schema="complextypes" name="complexList">
           <items>
-            <item>stringItem</item>
-            <item>dateItem</item>
-            <item>integerItem</item>
+            <item name="stringItem" displayContentDiffLinks="true" />
+            <item name="dateItem" />
+            <item name="integerItem" />
           </items>
         </field>
         <field schema="listoflists" name="listOfLists" />
@@ -102,14 +97,14 @@
       <fields>
         <field schema="headphone" name="frequency_response">
           <items>
-            <item>range</item>
-            <item>unit</item>
+            <item name="range" />
+            <item name="unit" />
           </items>
         </field>
         <field schema="headphone" name="impedance">
           <items>
-            <item>value</item>
-            <item>unit</item>
+            <item name="value" />
+            <item name="unit" />
           </items>
         </field>
       </fields>
@@ -120,9 +115,9 @@
       <fields>
         <field schema="headphone" name="retailers">
           <items>
-            <item>name</item>
-            <item>quantity</item>
-            <item>price</item>
+            <item name="name" />
+            <item name="quantity" />
+            <item name="price" />
           </items>
         </field>
       </fields>
