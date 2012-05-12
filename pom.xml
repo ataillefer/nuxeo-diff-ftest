@@ -10,9 +10,9 @@
   </parent>
 
   <groupId>org.nuxeo.ecm</groupId>
-  <artifactId>nuxeo-diff-test</artifactId>
-  <name>Nuxeo Diff Test</name>
-  <description>Provides tests for the document diff feature</description>
+  <artifactId>nuxeo-diff-ftest</artifactId>
+  <name>Nuxeo Diff FTest</name>
+  <description>Provides contributions for functional tests of the document diff feature</description>
 
   <repositories>
     <repository>
@@ -38,9 +38,9 @@
   </repositories>
 
   <scm>
-    <connection>scm:git:git://github.com/nuxeo/nuxeo-diff-test.git</connection>
-    <developerConnection>scm:git:ssh://git@github.com:nuxeo/nuxeo-diff-test.git</developerConnection>
-    <url>https://github.com/nuxeo/nuxeo-diff-test</url>
+    <connection>scm:git:git://github.com/ataillefer/nuxeo-diff-ftest.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com:ataillefer/nuxeo-diff-ftest.git</developerConnection>
+    <url>https://github.com/ataillefer/nuxeo-diff-ftest</url>
   </scm>
 
 </project>
