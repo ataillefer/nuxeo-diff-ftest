@@ -47,7 +47,10 @@
     <diffBlock name="testNoFields" />
 
     <!-- simpleTypes diffBlock -->
-    <diffBlock name="simpleTypes" label="label.diffBlock.simpleTypes">
+    <diffBlock name="simpleTypes">
+      <properties mode="any">
+        <property name="label">label.diffBlock.simpleTypes</property>
+      </properties>
       <fields>
         <field schema="simpletypes" name="string" />
         <field schema="simpletypes" name="textarea"
@@ -59,11 +62,18 @@
           displayContentDiffLinks="true" />
         <field schema="simpletypes" name="multivalued" />
       </fields>
+      <templates>
+        <template mode="any">/layouts/layout_diff_template.xhtml
+        </template>
+      </templates>
     </diffBlock>
 
     <!-- complexTypesAndListOfLists diffBlock -->
-    <diffBlock name="complexTypesAndListOfLists"
-      label="label.diffBlock.complexTypesAndListOfLists">
+    <diffBlock name="complexTypesAndListOfLists">
+      <properties mode="any">
+        <property name="label">label.diffBlock.complexTypesAndListOfLists
+        </property>
+      </properties>
       <fields>
         <field schema="complextypes" name="complex">
           <items>
@@ -82,18 +92,32 @@
         </field>
         <field schema="listoflists" name="listOfLists" />
       </fields>
+      <templates>
+        <template mode="any">/layouts/layout_diff_template.xhtml
+        </template>
+      </templates>
     </diffBlock>
 
     <!-- generalInfo diffBlock (Headphone) -->
-    <diffBlock name="generalInfo" label="label.diffBlock.generalInfo">
+    <diffBlock name="generalInfo">
+      <properties mode="any">
+        <property name="label">label.diffBlock.generalInfo</property>
+      </properties>
       <fields>
         <field schema="headphone" name="product_code" />
         <field schema="headphone" name="type" />
       </fields>
+      <templates>
+        <template mode="any">/layouts/layout_diff_template.xhtml
+        </template>
+      </templates>
     </diffBlock>
 
     <!-- techData diffBlock (Headphone) -->
-    <diffBlock name="techData" label="label.diffBlock.techData">
+    <diffBlock name="techData">
+      <properties mode="any">
+        <property name="label">label.diffBlock.techData</property>
+      </properties>
       <fields>
         <field schema="headphone" name="frequency_response">
           <items>
@@ -108,10 +132,17 @@
           </items>
         </field>
       </fields>
+      <templates>
+        <template mode="any">/layouts/layout_diff_template.xhtml
+        </template>
+      </templates>
     </diffBlock>
 
     <!-- distribution diffBlock (Headphone) -->
-    <diffBlock name="distribution" label="label.diffBlock.distribution">
+    <diffBlock name="distribution">
+      <properties mode="any">
+        <property name="label">label.diffBlock.distribution</property>
+      </properties>
       <fields>
         <field schema="headphone" name="retailers">
           <items>
@@ -121,6 +152,10 @@
           </items>
         </field>
       </fields>
+      <templates>
+        <template mode="any">/layouts/layout_diff_template.xhtml
+        </template>
+      </templates>
     </diffBlock>
 
   </extension>
