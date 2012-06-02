@@ -25,6 +25,7 @@
         <diffBlock name="files" />
         <diffBlock name="simpleTypes" />
         <diffBlock name="complexTypesAndListOfLists" />
+        <diffBlock name="customFiles" />
       </diffBlocks>
     </diffDisplay>
 
@@ -91,6 +92,26 @@
           </items>
         </field>
         <field schema="listoflists" name="listOfLists" />
+      </fields>
+      <templates>
+        <template mode="any">/layouts/layout_diff_template.xhtml
+        </template>
+      </templates>
+    </diffBlock>
+
+    <!-- customFiles diffBlock -->
+    <diffBlock name="customFiles">
+      <properties mode="any">
+        <property name="label">label.diffBlock.customFiles</property>
+      </properties>
+      <fields>
+        <field schema="customfiles" name="customFile"
+          displayContentDiffLinks="true" />
+        <field schema="customfiles" name="customFiles">
+          <items>
+            <item name="item" displayContentDiffLinks="true" />
+          </items>
+        </field>
       </fields>
       <templates>
         <template mode="any">/layouts/layout_diff_template.xhtml
