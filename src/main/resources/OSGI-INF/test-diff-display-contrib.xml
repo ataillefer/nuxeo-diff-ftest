@@ -8,14 +8,6 @@
   <extension target="org.nuxeo.ecm.diff.service.DiffDisplayService"
     point="diffDisplay">
 
-    <!-- Override File diffDisplay -->
-    <diffDisplay type="File">
-      <diffBlocks>
-        <diffBlock name="files" />
-        <diffBlock name="testNoFields" />
-      </diffBlocks>
-    </diffDisplay>
-
     <!-- SampleType diffDisplay -->
     <diffDisplay type="SampleType">
       <diffBlocks>
@@ -40,9 +32,6 @@
 
   <extension target="org.nuxeo.ecm.diff.service.DiffDisplayService"
     point="diffBlock">
-
-    <!-- No fields diffBlock -->
-    <diffBlock name="testNoFields" />
 
     <!-- simpleTypes diffBlock -->
     <diffBlock name="simpleTypes">
